@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Calculator</title>
+    <script src="calculator.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .calculator {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator input[type="text"] {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .calculator button {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #e9e9e9;
+        }
+        .calculator button.operator {
+            background-color: #f0ad4e;
+            color: #fff;
+        }
+        .calculator button.operator:hover {
+            background-color: #ec971f;
+        }
+        .calculator button.clear {
+            background-color: #d9534f;
+            color: #fff;
+        }
+        .calculator button.clear:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <br>
+        <button onclick="appendToResult('7')">7</button>
+        <button onclick="appendToResult('8')">8</button>
+        <button onclick="appendToResult('9')">9</button>
+        <button onclick="appendToResult('/')">/</button>
+        <br>
+        <button onclick="appendToResult('4')">4</button>
+        <button onclick="appendToResult('5')">5</button>
+        <button onclick="appendToResult('6')">6</button>
+        <button onclick="appendToResult('*')">*</button>
+        <br>
+        <button onclick="appendToResult('1')">1</button>
+        <button onclick="appendToResult('2')">2</button>
+        <button onclick="appendToResult('3')">3</button>
+        <button onclick="appendToResult('-')">-</button>
+        <br>
+        <button onclick="appendToResult('0')">0</button>
+        <button onclick="appendToResult('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendToResult('+')">+</button>
+        <br>
+        <button onclick="clearResult()" class="clear">C</button>
+        <button onclick="backspace()">←</button>
+    </div>
+</body>
+</html>
